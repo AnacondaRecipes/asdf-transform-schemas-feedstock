@@ -47,7 +47,7 @@ about:
 extra:
   anaconda-services:
     ref: https://anaconda.zendesk.com/agent/tickets/42309
-    reason: Carl Zeiss ask
+    reason: Dependency for asdf
   recipe-maintainers:
     - ianaobi
     - jhunkeler
