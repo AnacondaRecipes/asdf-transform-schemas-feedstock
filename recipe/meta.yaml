@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
   number: 0
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - setuptools
     - setuptools-scm
   run:
-    - importlib-resources >=3
+    - importlib-resources 
     - python >=3.8
     - asdf-standard >=1.0.1
 
@@ -32,19 +32,25 @@ test:
     - pip check
   requires:
     - pip
-    - asdf >=2.8.0
-    - asdf-astropy
+#    - asdf >=2.8.0
+#    - asdf-astropy
     - scipy
     - pytest
 
 about:
   home: https://github.com/asdf-format/asdf-transform-schemas
   summary: ASDF schemas for transforms
+  license_family: BSD
   license: BSD-3-Clause
   license_file: LICENSE
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/42309
+    reason: Dependency for asdf
   recipe-maintainers:
+    - ianaobi
+    - bradley
     - jhunkeler
     - WilliamJamieson
     - braingram
