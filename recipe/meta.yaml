@@ -32,8 +32,8 @@ test:
     - pip check
   requires:
     - pip
-    - asdf >=2.8.0
-    - asdf-astropy
+#    - asdf >=2.8.0
+#    - asdf-astropy
     - scipy
     - pytest
 
