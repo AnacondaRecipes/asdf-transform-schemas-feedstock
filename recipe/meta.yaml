@@ -50,6 +50,7 @@ extra:
     reason: Dependency for asdf
   recipe-maintainers:
     - ianaobi
+    - bradley
     - jhunkeler
     - WilliamJamieson
     - braingram
